@@ -1,0 +1,23 @@
+* text=auto
+
+*.dart text eol=lf
+*.arb text eol=lf
+*.json text eol=lf
+*.kts text eol=lf
+*.md text eol=lf
+*.plist text eol=lf
+*.properties text eol=lf
+*.storyboard text eol=lf
+*.swift text eol=lf
+*.svg text eol=lf
+*.xcconfig text eol=lf
+*.xml text eol=lf
+*.yaml text eol=lf
+*.yml text eol=lf
+
+*.ico binary
+*.jpeg binary
+*.jpg binary
+*.pdf binary
+*.png binary
+*.webp binary

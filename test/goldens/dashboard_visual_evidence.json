@@ -1,0 +1,52 @@
+{
+  "contract": "Dashboard JAHRIS dark mobile mengikuti referensi Figma pengguna: gradient #03081E melalui #08213F ke #1B2D68, glow check-in radial #00D26A pada opacity 35% berukuran 374x374, panel layanan/nav #263567, empat ikon layanan putih dengan latar transparan seragam, popup Semua Layanan memakai ikon putih monokrom pada lingkaran transparan tanpa tint kategori, banner libur memakai aset liburmendatang, ikon pengajuan memakai aset SVG layanan yang sama berdasarkan jenisnya, dan bottom navigation melayang pada viewport 390x844.",
+  "targetViewports": [
+    "390x844"
+  ],
+  "accessibility": {
+    "status": "pass",
+    "evidence": "Kontrol utama menggunakan InkWell/IconButton dengan semantics atau tooltip, tombol check-in memiliki label Semantics, dan widget test tidak menemukan exception maupun overflow."
+  },
+  "responsive": {
+    "status": "pass",
+    "evidence": "Render 390x844 mempertahankan empat layanan dan empat item navigasi dalam Expanded, teks panjang memakai ellipsis, serta konten dashboard tetap dapat digulir."
+  },
+  "contentStates": {
+    "loading": {
+      "status": "pass",
+      "evidence": "Dashboard menampilkan struktur loading terpusat saat provider masih memuat."
+    },
+    "empty": {
+      "status": "pass",
+      "evidence": "Daftar pengajuan kosong menampilkan kartu Belum ada pengajuan terbaru."
+    },
+    "error": {
+      "status": "pass",
+      "evidence": "Kegagalan ringkasan menampilkan pesan Ringkasan belum dapat dimuat dan tombol Coba Lagi."
+    },
+    "partial": {
+      "status": "not-applicable",
+      "reason": "Endpoint dashboard saat ini dimuat sebagai satu ringkasan; tidak ada kontrak respons parsial terpisah."
+    },
+    "success": {
+      "status": "pass",
+      "evidence": "Fixture dua pengajuan berhasil dirender bersama hero kehadiran, layanan cepat, banner libur, dan navigasi."
+    },
+    "permission": {
+      "status": "not-applicable",
+      "reason": "Dashboard tidak meminta izin perangkat; izin lokasi dan kamera diminta pada alur kehadiran."
+    }
+  },
+  "renderedEvidence": [
+    {
+      "viewport": "390x844",
+      "artifact": "dashboard_dark_390x844.png",
+      "observation": "Gradient Figma #03081E ke navy #1B2D68, glow radial #00D26A 35%, banner libur dengan aset SVG, serta ikon Cuti dan Reimburse pada pengajuan memakai SVG yang sama dengan layanan atas dengan jarak 12 px; bottom navigation ter-render tanpa overflow."
+    },
+    {
+      "viewport": "390x844",
+      "artifact": "dashboard_services_sheet_dark_390x844.png",
+      "observation": "Popup Semua Layanan menampilkan sembilan ikon putih monokrom pada lingkaran putih transparan 10%, tanpa tint biru, oranye, ungu, atau hijau, dalam grid tiga kolom tanpa overflow."
+    }
+  ]
+}

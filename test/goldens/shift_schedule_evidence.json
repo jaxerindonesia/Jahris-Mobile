@@ -1,0 +1,47 @@
+{
+  "contract": "Layar Jadwal Shift mobile menampilkan header, pemilih tujuh hari, kartu jadwal terpilih, daftar satu minggu, serta tombol tukar shift pada tema dark navy JAHRIS. Data berasal dari workingSchedules cabang pengguna dan hari nonaktif tidak menampilkan jam kerja.",
+  "targetViewports": [
+    "390x844"
+  ],
+  "accessibility": {
+    "status": "pass",
+    "evidence": "Pemilih tanggal memiliki label Semantics lengkap, target tanggal 52 px, tombol utama 48 px, serta seluruh kontrol menggunakan komponen Material dengan fokus dan tooltip. Widget test tidak menemukan exception atau overflow."
+  },
+  "responsive": {
+    "status": "pass",
+    "evidence": "Render 390x844 memperlihatkan tujuh tanggal membagi lebar secara fleksibel, teks baris memiliki Expanded/ellipsis, dan daftar dapat digulir tanpa overflow."
+  },
+  "contentStates": {
+    "loading": {
+      "status": "pass",
+      "evidence": "AsyncLoading dirender sebagai lima skeleton ListLoading dengan struktur stabil."
+    },
+    "empty": {
+      "status": "pass",
+      "evidence": "Cabang tanpa workingSchedules menampilkan pesan jadwal belum diatur dan pull-to-refresh."
+    },
+    "error": {
+      "status": "pass",
+      "evidence": "Kegagalan API menampilkan ListError berbahasa Indonesia dengan aksi Coba lagi."
+    },
+    "partial": {
+      "status": "not-applicable",
+      "reason": "Setiap hari dipetakan independen; hari tanpa entri tampil aman sebagai Libur dan bukan kegagalan parsial."
+    },
+    "success": {
+      "status": "pass",
+      "evidence": "Fixture tujuh hari berhasil dirender; jadwal pagi, siang, dan libur tampil dengan aksen yang berbeda."
+    },
+    "permission": {
+      "status": "not-applicable",
+      "reason": "Layar ini hanya membaca data jadwal dan tidak meminta izin perangkat. Otorisasi API ditangani sesi aplikasi."
+    }
+  },
+  "renderedEvidence": [
+    {
+      "viewport": "390x844",
+      "artifact": "shift_schedule_390x844.png",
+      "observation": "Tema navy, pemilih minggu, kartu jadwal dominan, daftar mingguan, dan tombol tukar shift ter-render tanpa overflow pada viewport target."
+    }
+  ]
+}
